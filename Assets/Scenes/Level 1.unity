@@ -125,12 +125,12 @@ GameObject:
   - component: {fileID: 84175169}
   - component: {fileID: 84175168}
   m_Layer: 0
-  m_Name: Lower Button
+  m_Name: Next Scene Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &84175167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -435,8 +435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 436231611}
   - component: {fileID: 436231610}
-  - component: {fileID: 436231613}
   - component: {fileID: 436231612}
+  - component: {fileID: 436231613}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -500,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436231609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.49, y: 0.255, z: 0}
+  m_LocalPosition: {x: 5, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -538,27 +538,21 @@ PolygonCollider2D:
       - {x: 1, y: -0.25}
       - {x: 0.9964676, y: 0.042052984}
       - {x: 0.8288727, y: 0.11589795}
---- !u!50 &436231613
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &436231613
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436231609}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1326544206a4a12409b25eac7901fd61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: 1
+  maxX: 15
+  screenWidthInUnits: 16
 --- !u!1 &504573932
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +565,7 @@ GameObject:
   - component: {fileID: 504573935}
   - component: {fileID: 504573934}
   m_Layer: 0
-  m_Name: Lower Text
+  m_Name: Next Scene Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,6 +867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498800227}
   - component: {fileID: 1498800228}
+  - component: {fileID: 1498800229}
   m_Layer: 0
   m_Name: Lose Collider
   m_TagString: Untagged
@@ -920,6 +915,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2025771, y: 0.56235576}
   m_EdgeRadius: 0
+--- !u!114 &1498800229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498800226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613ed7a733a0f264daf2e2f5e6377b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1508067981
 GameObject:
   m_ObjectHideFlags: 0
