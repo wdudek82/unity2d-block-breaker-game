@@ -6,15 +6,18 @@ public class Block : MonoBehaviour
 
     // Cached reference
     Level level;
+    private GameStatus gameStatus;
 
     public void Start()
     {
         level = FindObjectOfType<Level>();
         level.CountBreakableBlocks();
+        gameStatus = FindObjectOfType<GameStatus>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        gameStatus.AddToScore();
         DestroyBlock();
     }
 
